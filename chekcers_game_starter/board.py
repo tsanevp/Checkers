@@ -89,6 +89,7 @@ class Board:
             Parameters:
                 self -- The current Board object.
         '''
+        self.pen.color("black", "white")
         self.draw_square(BOARD_CORNER, BOARD_CORNER, BOARD_SIZE)
 
     def update_board(self):
@@ -99,8 +100,12 @@ class Board:
             Parameters:
                 self -- The current Board object.
         '''
+        # self.pen.color("white")
+        # self.draw_square(-WINDOW_SIZE, -WINDOW_SIZE, WINDOW_SIZE*2)
+        # self.init_board()
         self.board_squares()
         self.draw_checkers()  # Each checker in current position
+
 
     def board_squares(self):
         '''
@@ -255,7 +260,24 @@ class Board:
                 winner -- The winner of the game.
         '''
         if winner is not None:
-            self.pen.color("BLUE")
-            self.pen.setposition(BOARD_CORNER*3/4 + 10, -40)
-            self.pen.write("GAME OVER!\n{} wins!".format(winner.lower()),
-                           font=("Verdana", 40, "normal"))
+            self.pen.color("white")
+            self.draw_square(-100, -100, 200)
+            self.write_text("GAME OVER!", 0, 25, 20, "BLUE")
+            self.write_text("{} wins!".format(winner.lower().capitalize()), 0, -25, 20, "BLUE")
+
+    def write_text(self, string, x, y, size, color):
+        '''
+            Method -- write_text
+                Defines and writes text given the string, x/y position, font size,
+                and color of the text.
+            Parameters:
+                self -- The current Board object.
+                string -- The string of text to write.
+                x -- The x position of the text.
+                y -- The y position of the text.
+                size -- The text size.
+                color -- The color of the text.
+        '''
+        self.pen.color(color)
+        self.pen.setposition(x, y)
+        self.pen.write(string, align="center", font=("Verdana", size, "normal"))

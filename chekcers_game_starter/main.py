@@ -7,7 +7,7 @@ from game_state import GameState
 
 
 def main():
-    game = GameState()
+    GameState()
 
 
 if __name__ == "__main__":
