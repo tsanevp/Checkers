@@ -100,12 +100,8 @@ class Board:
             Parameters:
                 self -- The current Board object.
         '''
-        # self.pen.color("white")
-        # self.draw_square(-WINDOW_SIZE, -WINDOW_SIZE, WINDOW_SIZE*2)
-        # self.init_board()
         self.board_squares()
         self.draw_checkers()  # Each checker in current position
-
 
     def board_squares(self):
         '''
@@ -181,7 +177,7 @@ class Board:
                                       + RADIUS, BOARD_CORNER + SQUARE
                                       * index_row + PIECE_ADJUSTMENTS))
                 is_king = self.kings[index_row][index_col]
-                Checker(self.pen, is_king)
+                Checker(self.pen, is_king, RADIUS - PIECE_ADJUSTMENTS)
 
     def draw_valid_move(self, moves):
         '''
@@ -229,6 +225,43 @@ class Board:
             self.red_left -= 1
         self.piece_location[row][col] = EM
 
+    def current_turn(self, turn):
+        '''
+            Method -- current_turn
+                Displays whose which players turn it currently is on the
+                Turtle screen.
+            Parameters:
+                self -- The current Board object.
+                turn -- The current players turn.
+        '''
+        self.pen.color("white")
+        self.draw_square(-BOARD_SIZE/2, BOARD_SIZE/2, BOARD_SIZE)
+        self.write_text("{}'s Turn".format(turn.lower().capitalize()), 0, 200, 20, turn)
+
+    def black_pieces_left(self):
+        '''
+            Method -- black_pieces_left
+                Displays the number of black pieces remaining on the board.
+            Parameters:
+                self -- The current Board object.
+        '''
+        self.pen.setposition(-223, -22)
+        self.pen.color(BP)
+        Checker(self.pen, False, 20)
+        self.write_text(str(self.black_left), -222, -12.5, 15, "White")
+
+    def red_pieces_left(self):
+        '''
+            Method -- red_pieces_left
+                Displays the number of red pieces remaining on the board.
+            Parameters:
+                self -- The current Board object.
+        '''
+        self.pen.setposition(221, -22)
+        self.pen.color(RP)
+        Checker(self.pen, False, 20)
+        self.write_text(str(self.red_left), 222, -12.5, 15, "White")
+
     def winner(self, turn, player_moves, turn_count, winner=None):
         '''
             Method -- winner
@@ -248,6 +281,7 @@ class Board:
             if self.red_left <= 0 or (turn == BP and len(player_moves) == 0):
                 winner = BP
 
+        # If there is a winner, prints game over message
         self.game_over(winner)
 
     def game_over(self, winner):
@@ -260,10 +294,8 @@ class Board:
                 winner -- The winner of the game.
         '''
         if winner is not None:
-            self.pen.color("white")
-            self.draw_square(-100, -100, 200)
-            self.write_text("GAME OVER!", 0, 25, 20, "BLUE")
-            self.write_text("{} wins!".format(winner.lower().capitalize()), 0, -25, 20, "BLUE")
+            self.write_text("GAME OVER!", 0, 25, 25, "BLUE")
+            self.write_text("{} wins!".format(winner.lower().capitalize()), 0, -25, 25, "BLUE")
 
     def write_text(self, string, x, y, size, color):
         '''

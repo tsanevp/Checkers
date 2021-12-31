@@ -62,7 +62,7 @@ class GameState:
         self.board = Board()
         self.piece_location = self.board.piece_location
         self.player = Player(self.board)
-
+        self.selected = False
         self.turn = BP
         self.turn_count = 0
         self.skip_occured = False
@@ -70,7 +70,9 @@ class GameState:
         self.click_position = self.valid_moves = self.skipped = {}
         self.click_row_col()
         self.scan_for_pieces()
-        # self.show_current_turn()
+        self.board.current_turn(self.turn)
+        self.board.black_pieces_left()
+        self.board.red_pieces_left()
 
     def click_row_col(self):
         '''
@@ -106,7 +108,6 @@ class GameState:
 
                 # Updates the UI with each click made
                 self.board.update_board()
-                # self.show_current_turn()
                 self.outline_square_w_movable_piece()
 
                 # If a black piece is selected, control and move piece
@@ -275,7 +276,8 @@ class GameState:
         '''
         moves_wo_skip = []
         # Moves piece if criteria below met
-        self.move(row, col)
+        if self.selected:
+            self.move(row, col)
         if self.turn == RP:
             return
         piece = self.selected_square
@@ -296,7 +298,9 @@ class GameState:
 
             # Draws valid moves for selected piece
             self.board.draw_valid_move(self.valid_moves)
+            self.selected = True
         else:
+            self.selected = False
             return False
 
     def move(self, row, col):
@@ -568,17 +572,14 @@ class GameState:
         else:
             self.turn = "BLACK"
         self.turn_count += 1
-        # self.show_current_turn()
 
+        # Displays whose turn it currently is
+        self.board.current_turn(self.turn)
+        self.board.black_pieces_left()
+        self.board.red_pieces_left()
+ 
         # Checks to see if game has ended
         self.board.winner(self.turn, self.player_moves, self.turn_count)
-
-    def show_current_turn(self):
-        if self.turn == BP:
-            self.board.write_text("Your Move", 0, 200, 30, "Blue")
-        else:
-            self.board.write_text("AI's Move", 0, 200, 30, "Blue")
-
 
     def remove_checker(self, skipped):
         '''

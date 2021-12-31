@@ -20,7 +20,7 @@ class Checker():
             (none intended to be accessed outside the class)
     '''
 
-    def __init__(self, pen, is_king):
+    def __init__(self, pen, is_king, radius):
         '''
             Constructor -- Creates a new instance of Checker.
             Parameters:
@@ -33,7 +33,7 @@ class Checker():
         self.pen = pen
 
         # Defines and adjusts size of piece radius to fit squares
-        self.RADIUS = RADIUS - PIECE_ADJUSTMENTS
+        self.RADIUS = radius
         self.draw_circle()
         if self.is_king:
             x, y = self.pen.pos()
