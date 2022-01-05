@@ -1,6 +1,5 @@
 '''
 Peter Tsanev
-CS 5001, Fall 2021
 This file is responsible for locating all the pieces of the current
 player. It will allow us to determine all the playable moves the
 player has. Everything is testable.

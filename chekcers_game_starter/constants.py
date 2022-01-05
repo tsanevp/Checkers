@@ -1,6 +1,5 @@
 '''
 Peter Tsanev
-CS 5001, Fall 2021
 This python file holds all the constants that will be used
 in the checkers program. It will allows the program to call
 specific constants within each class.

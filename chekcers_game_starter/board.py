@@ -1,6 +1,5 @@
 '''
 Peter Tsanev
-CS 5001, Fall 2021
 This board.py file is responsible for defining and setting up a board for
 a game of checkers. This file handles everything related to Turtle and the UI
 and is responsible for drawing the board, it's pieces, and performing pre-frame

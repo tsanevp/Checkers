@@ -1,6 +1,5 @@
 '''
 Peter Tsanev
-CS 5001, Fall 2021
 This checker.py file is responsible for defining and setting up each
 checker piece. Only self.is_king in constructor can be tested. All
 else is Turtle related.

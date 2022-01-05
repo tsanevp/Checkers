@@ -1,6 +1,5 @@
 '''
 Peter Tsanev
-CS 5001, Fall 2021
 This file handles everything related to the game state as well as all logic. To
 test this file, lines 50-52 must be commented out.
 '''
