@@ -33,10 +33,16 @@ Official Checkers Game Rules may be referenced here: https://www.ultraboardgames
     
 ### Screenshot
 
-#### Home Page
+#### Game Start
 <img width="1920" alt="weather app home screen" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/home-page.png">
 
-#### Search Results
+#### Capturing A Piece
+<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
+
+#### Creating A King Piece
+<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
+
+#### Game Over, Black Wins
 <img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
 
 ### Links
