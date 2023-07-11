@@ -4,7 +4,7 @@
 
 - [Overview](https://github.com/tsanevp/Checkers#overview)
     - [The challenge](https://github.com/tsanevp/Checkers#the-challenge)
-    - [Screenshot](https://github.com/tsanevp/Checkers#screenshot)
+    - [Screenshots](https://github.com/tsanevp/Checkers#screenshots)
     - [How to play](https://github.com/tsanevp/Checkers#how-to-play)
 - [My process](https://github.com/tsanevp/Checkers#my-process)
     - [Built with](https://github.com/tsanevp/Checkers#built-with)
