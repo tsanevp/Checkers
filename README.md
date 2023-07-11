@@ -1,8 +1,8 @@
 # Checkers
 ## Software Requirements:
-In order to run and play the Checkers game, you must install or have an IDE that supports Python. 
+To run and play the Checkers game, you must install or have an IDE that supports Python. 
 ## How to Play:
-To play the game, you will need to download the Checkers directory to your respective IDE, then open the checkers_game_starter folder and run the main.py file.
+To play the game, you must download the Checkers directory to your respective IDE, then open the checkers_game_starter folder and run the main.py file.
 
 Official Checkers Game Rules may be referenced here: https://www.ultraboardgames.com/checkers/game-rules.php
 ## Game Play Screenshots:
@@ -34,35 +34,22 @@ Official Checkers Game Rules may be referenced here: https://www.ultraboardgames
 ### Screenshot
 
 #### Game Start
-<img width="1920" alt="weather app home screen" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/home-page.png">
+<img width="350" alt="checkers game starting" src="https://github.com/tsanevp/Checkers/blob/main/images/game-start.png">
 
 #### Capturing A Piece
-<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
+<img width="350" alt="capturing a piece" src="https://github.com/tsanevp/Checkers/blob/main/images/capture-piece.png">
 
 #### Creating A King Piece
-<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
+<img width="350" alt="making a king piece" src="https://github.com/tsanevp/Checkers/blob/main/images/king-piece.png">
 
 #### Game Over, Black Wins
-<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
-
-### Links
-
-Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev)
+<img width="350" alt="game over, black wins" src="https://github.com/tsanevp/Checkers/blob/main/images/game-over.png">
 
 ## My process
 
 ### Built with
-#### FrontEnd
-- HTML5
-- CSS
-- JS
-#### Backend
-- Node.js
-- Express.js
-- EJS
-- MongoDB
-#### Deployed On
-- Fly.io
+- Python
+- Python's Turtle Module
 
 ### What I learned
 
