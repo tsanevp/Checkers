@@ -36,7 +36,7 @@
 <img width="350" alt="game over, black wins" src="https://github.com/tsanevp/Checkers/blob/main/images/game-over.png">
 
 ### How to play
-- It is assumed you have an IDE & Python installed.
+- It is assumed you have an IDE & Python installed
 - To play, clone this Checkers directory. After, open the 'checkers_game_starter' folder and run the 'main.py'
 - Official Checkers Game Rules may be referenced here: https://www.ultraboardgames.com/checkers/game-rules.php
 
@@ -48,9 +48,9 @@
 
 ### What I learned
 
-- How to break down the problem of creating a checkers game into smaller, more managable tasks.
-- How to structure and separate code into different classes to easily manage game state, players, and board pieces.
-- How to effectively perform unit tests and debug errors in my code.
+- How to break down the problem of creating a checkers game into smaller, more manageable tasks
+- How to structure and separate code into different classes to easily manage game state, players, and board pieces
+- How to effectively perform unit tests and debug errors in my code
 
 ### Useful resources
 
