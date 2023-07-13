@@ -17,8 +17,8 @@
 
 ### The challenge
 
-- Begin my development career by creating my first-ever project
-- Make the checkers game playable vs. AI
+- Begin my development career by creating my first project
+- Make a checkers game where the user plays vs. AI
 - Follow proper coding practices with no previous experience
     
 ### Screenshots
